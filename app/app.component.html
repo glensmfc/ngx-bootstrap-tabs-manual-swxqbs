@@ -1,0 +1,29 @@
+<alert type="success">
+  <strong>Tabs!</strong> you can enable/disable tab switching with the button here.
+</alert>
+
+<label for="switcher">Disable tab switching: <input type="checkbox" [(ngModel)]="disableSwitching"></label>
+<p>Tab switching is <strong>{{ disableSwitching ? 'disabled' : 'enabled ' }}</strong>.</p>
+<hr>
+<tabset #tabset>
+  <tab
+    heading="First tab"
+    >Tab 1 content</tab>
+
+  <tab
+    heading="Second tab"
+    >Tab 2 content</tab>
+
+      <tab
+    heading="Second tab"
+    >Tab 2 content</tab>
+
+      <tab
+    heading="Second tab"
+    >Tab 2 content</tab>
+</tabset>
+
+<button (click)='goto(0)'>Go to 1</button>
+<button (click)='goto(1)'>Go to 2</button>
+<button (click)='goto(2)'>Go to 3</button>
+<button (click)='goto(3)'>Go to 4</button>
